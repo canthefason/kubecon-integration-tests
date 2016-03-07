@@ -2,12 +2,12 @@
 module.exports = {
   options : {
     url : process.env.URL || 'localhost:3000',
-    pause: process.env.PAUSE || 0
+    pause: parseInt(process.env.PAUSE) || 0
   },
 
   before : function(browser, done){
+    browser.windowMaximize().pause(this.options.pause + 800)
     browser.url(this.options.url)
-    //browser.windowMaximize().pause(this.options.pause + 800)
     done()
 
   },
