@@ -6,14 +6,14 @@ module.exports = {
   },
 
   before : function(browser, done){
-    browser.windowMaximize().pause(this.options.pause + 800)
     browser.url(this.options.url)
+    //browser.windowMaximize().pause(this.options.pause + 800)
     done()
-    
+
   },
   'adds todo messages' : function (browser) {
     var pause = this.options.pause
-    browser  
+    browser
     .waitForElementVisible('.todoapp', pause + 1000)
     .setValue('input.new-todo', "I'm a todo", function(){
       browser
