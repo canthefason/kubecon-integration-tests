@@ -20,14 +20,14 @@
     "default" : {
       "launch_url" : "http://localhost",
       "selenium_port"  : 4444,
-      "selenium_host"  : "localhost",
+      "selenium_host"  : "selenium",
       "silent": true,
       "screenshots" : {
         "enabled" : false,
         "path" : ""
       },
       "desiredCapabilities": {
-        "browserName": "chrome",
+        "browserName": "firefox",
         "javascriptEnabled": true,
         "acceptSslCerts": true
       }
